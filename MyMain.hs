@@ -20,6 +20,7 @@ import Sub.SubEmpty
 import qualified Sub.Stream as S
 import qualified Sub.SpModule as P
 
+
 {-
     -- decalration of functions
     ifThenElse :: Bool -> a -> a -> a   -- declaration
