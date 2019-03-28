@@ -23,6 +23,9 @@ instance Monad Tree where
     (>>=) = bind'
 
 
+foldTree :: (a -> [b] -> b) -> Tree a -> b
+foldTree f (Node a children) = f a ((foldTree f) <$> children)
+
 strTree x = Node (show x ++"h") [Node (show x ++ "l") [], Node (show x ++ "r") []]
 
 funcTree :: Show x => Tree (x -> String)

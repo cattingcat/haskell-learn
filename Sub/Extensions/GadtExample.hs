@@ -1,8 +1,6 @@
 {-# LANGUAGE GADTs #-}
 
-module Sub.Extensions where
-
-
+module Sub.GadtExample where
 
 import Control.Applicative
 
