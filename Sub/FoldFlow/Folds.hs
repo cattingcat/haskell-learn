@@ -39,7 +39,7 @@ unfoldList f z = loop (f z) where
     loop Nothing = []
     loop (Just (a, b')) = a : (loop $ f b')
 
-unfoldNan :: (a -> Maybe a) -> a -> Nat
-unfoldNan f a = case (f a) of
-    Just b -> Succ (unfoldNan f b)
+unfoldNat :: (a -> Maybe a) -> a -> Nat
+unfoldNat f a = case (f a) of
+    Just b -> Succ (unfoldNat f b)
     Nothing -> Zero

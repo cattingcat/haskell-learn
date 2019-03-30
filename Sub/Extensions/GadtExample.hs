@@ -13,3 +13,8 @@ t1 = Asd
 
 t2 :: MyTmp [Int]
 t2 = Qwe [5]
+
+data AST a where
+    T, F :: AST Bool
+    Num :: Int -> AST Int
+    Greater :: AST Int -> AST Int -> AST Bool
